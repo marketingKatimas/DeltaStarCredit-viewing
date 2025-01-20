@@ -2071,7 +2071,7 @@ color: #fff;
 
 .theme-bg {
   /* background: var(--tp-theme-2); */
-  background: #296bdd;
+  background: var(--tp-theme-1);
 }
 
 .theme-bg-2 {
