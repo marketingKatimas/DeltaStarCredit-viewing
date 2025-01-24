@@ -493,17 +493,30 @@
                                  <div class="error-message" id="nameError" style="color: red;"></div>
                            </div>
                         </div>
-                        <div class="col-xl-6 col-lg-6 col-md-6">
+                        <div class="col-xl-4 col-lg-4 col-md-4">
                            <div class="comment-form__input-box">
                               <input type="text" placeholder="Phone *" name="phone" id="phone">
                                  <div class="error-message" id="phoneError" style="color: red;"></div>
                            </div>
                         </div>
-                        <div class="col-xl-6 col-lg-6 col-md-6">
+                        <div class="col-xl-4 col-lg-4 col-md-4">
                            <div class="comment-form__input-box">
                               <input type="email" placeholder="Email *" name="email" id="email">
                                  <div class="error-message" id="emailError" style="color: red;"></div>
                            </div>
+                        </div>
+                        <div class="contact__input col-xl-4 col-lg-4 col-md-4">
+                           <!-- <label for="sector" class="formbold-form-label" id="EmploymentSector">
+                              Employment Sector: </label> -->
+                           <select class="formbold-form-input-option" name="branch" id="branch">
+                              <option value="" disabled selected id="PleaseSelectBranchContact">Select Which Branch
+                              </option>
+                              <option value="bintulu" id="Bintulu">Bintulu</option>
+                              <option value="matang" id="Matang">Matang, Kuching
+                              </option>
+                              <option value="satok" id="Satok">Satok, Kuching</option>
+                           </select>
+                           <div class="error-message" id="sectorError" style="color: red;"></div>
                         </div>
                         
                         <!-- <div class="col-xl-6 col-lg-6 col-md-6">
@@ -940,7 +953,7 @@
       function sendData(formValue, quiet = false) {
 
          $.ajax({
-            url: 'https://scripts.katimas.brixmind.com/form',
+            url: 'https://scripts.katimas.brixmind.com/form-branch',
             type: 'POST',
             data: formValue,
             success: function (data) {

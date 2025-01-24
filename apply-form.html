@@ -427,6 +427,20 @@
                                     <input type="text" name="nettSalary" id="nettSalary" placeholder="Monthly Nett Salary (RM)">
                                     <div class="error-message" id="nettSalaryError" style="color: red;"></div>
                                  </div>
+
+                                 <div class="contact__input">
+                                    <!-- <label for="sector" class="formbold-form-label" id="EmploymentSector">
+                                       Employment Sector: </label> -->
+                                    <select class="formbold-form-input-option" name="branch" id="branch">
+                                       <option value="" disabled selected id="PleaseSelectBranch">Please Select Which Branch
+                                       </option>
+                                       <option value="bintulu" id="Bintulu">Bintulu</option>
+                                       <option value="matang" id="Matang">Matang, Kuching
+                                       </option>
+                                       <option value="satok" id="Satok">Satok, Kuching</option>
+                                    </select>
+                                    <div class="error-message" id="sectorError" style="color: red;"></div>
+                                 </div>
    
                                  <div class="contact__button">
                                     <button class="tp-btn-3 g-recaptcha"
@@ -1012,7 +1026,7 @@
 
       function sendData(formValue, quiet = false) {
          $.ajax({
-            url: 'https://scripts.katimas.brixmind.com/applyform',
+            url: 'https://scripts.katimas.brixmind.com/applyform-branch',
             type: 'POST',
             data: formValue,
             success: function (data) {
