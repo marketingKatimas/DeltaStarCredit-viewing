@@ -656,7 +656,19 @@ div.demo img {
 
 /* Recently added - newly added */
 
+.indent-text{
+  text-indent: 50px;
+}
 
+.email-list {
+  list-style-type: none; /* Removes bullet points */
+  padding-left: 0; /* Removes default padding */
+}
+
+.attention {
+  font-weight: bold;
+  margin-top: 10px;
+}
 
 .tp-portfolio__thumb{
   width: 100%; /* Full width */
